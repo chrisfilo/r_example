@@ -2,7 +2,10 @@ args <- commandArgs(trailingOnly = TRUE)
 
 demographics <- read.csv(file=args[1], head=TRUE, sep="\t")
 age <- demographics[5]
-demean_age <- age - sum(age)/length(age)
+mean_age <- sum(age)/length(age)
+stopifnot(mean_age < 100)
+stopifnot(mean_age > 10)
+demean_age <- age - mean_age
 
 write.table(demean_age, file="age_demeaned.tsv", row.names=FALSE, col.names=FALSE, sep="\t")
 
