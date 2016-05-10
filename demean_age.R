@@ -1,7 +1,7 @@
 args <- commandArgs(trailingOnly = TRUE)
 
 demographics <- read.csv(file=args[1], head=TRUE, sep="\t")
-age <- demographics[5]
+age <- demographics$age
 mean_age <- sum(age)/length(age)
 stopifnot(mean_age < 100)
 stopifnot(mean_age > 10)
