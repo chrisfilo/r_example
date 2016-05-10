@@ -1,3 +1,4 @@
 language: r
 script:
   - R demean_age.R
+  - R demean_age.R
