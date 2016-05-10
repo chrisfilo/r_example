@@ -1,7 +1,7 @@
 ## Customize dependencies
 dependencies:
   pre:
-    - sudo apt-get update && sudo apt-get install R
+    - sudo apt-get update && sudo apt-get -y install r-base
 ## Customize test commands
 test:
   override:
